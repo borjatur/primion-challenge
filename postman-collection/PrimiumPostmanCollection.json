@@ -1,0 +1,190 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "PrimiumPostmanCollection",
+    "dateExported": "2023-04-02T21:22:13.613Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "1bdebdc8-046e-4651-934d-f666e4565756",
+            "name": "departments",
+            "containerId": "",
+            "created": "2023-04-02T11:27:47.532Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "7cff53b6-6ae8-4878-9455-15a33102b152",
+            "name": "users",
+            "containerId": "",
+            "created": "2023-04-02T11:28:01.652Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "585532d0-d00e-4121-afbe-6ed56215e961",
+            "colId": "14c672c2-9547-47f4-aefa-dd20f98b5b2a",
+            "containerId": "1bdebdc8-046e-4651-934d-f666e4565756",
+            "name": "http://localhost:3000/api/departments",
+            "url": "http://localhost:3000/api/departments",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-04-02T11:19:09.845Z",
+            "modified": "2023-04-02T18:03:45.017Z",
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "413fa502-f4f8-4d2c-b039-b63caa204a79",
+            "colId": "14c672c2-9547-47f4-aefa-dd20f98b5b2a",
+            "containerId": "1bdebdc8-046e-4651-934d-f666e4565756",
+            "name": "http://localhost:3000/api/departments/1",
+            "url": "http://localhost:3000/api/departments/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-04-02T11:20:56.410Z",
+            "modified": "2023-04-02T18:18:03.676Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "fb9c3a43-4a0a-4a18-af39-7de01910b8b1",
+            "colId": "14c672c2-9547-47f4-aefa-dd20f98b5b2a",
+            "containerId": "1bdebdc8-046e-4651-934d-f666e4565756",
+            "name": "http://localhost:3000/api/departments",
+            "url": "http://localhost:3000/api/departments",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-04-02T11:27:21.423Z",
+            "modified": "2023-04-02T18:17:54.474Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"department1\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e8eb4386-6cb2-4d3f-9ccf-1dfd1b05868d",
+            "colId": "14c672c2-9547-47f4-aefa-dd20f98b5b2a",
+            "containerId": "1bdebdc8-046e-4651-934d-f666e4565756",
+            "name": "http://localhost:3000/api/departments",
+            "url": "http://localhost:3000/api/departments/1",
+            "method": "PATCH",
+            "sortNum": 40000,
+            "created": "2023-04-02T11:40:33.524Z",
+            "modified": "2023-04-02T19:12:11.154Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"departmentafsd\",\n  \"asf\": \"asdf\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2d77e011-28e9-4860-a81d-fd24a4c061ca",
+            "colId": "14c672c2-9547-47f4-aefa-dd20f98b5b2a",
+            "containerId": "1bdebdc8-046e-4651-934d-f666e4565756",
+            "name": "http://localhost:3000/api/departments/1",
+            "url": "http://localhost:3000/api/departments/4",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-04-02T11:46:40.581Z",
+            "modified": "2023-04-02T18:06:16.765Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "bb88669c-52ac-447a-b9b0-387b6e7e7d76",
+            "colId": "14c672c2-9547-47f4-aefa-dd20f98b5b2a",
+            "containerId": "7cff53b6-6ae8-4878-9455-15a33102b152",
+            "name": "http://localhost:3000/api/departments/2/users",
+            "url": "http://localhost:3000/api/departments/1/users",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-04-02T12:02:52.973Z",
+            "modified": "2023-04-02T19:11:09.563Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"asdasdff\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "96450553-b44e-4f51-8900-07bf6fcd8550",
+            "colId": "14c672c2-9547-47f4-aefa-dd20f98b5b2a",
+            "containerId": "7cff53b6-6ae8-4878-9455-15a33102b152",
+            "name": "http://localhost:3000/api/departments/2/users",
+            "url": "http://localhost:3000/api/departments/1/users",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-04-02T15:33:09.889Z",
+            "modified": "2023-04-02T18:26:10.955Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7544091c-71a9-4742-9605-0a8e6b809a12",
+            "colId": "14c672c2-9547-47f4-aefa-dd20f98b5b2a",
+            "containerId": "7cff53b6-6ae8-4878-9455-15a33102b152",
+            "name": "http://localhost:3000/api/departments/1/users/2",
+            "url": "http://localhost:3000/api/departments/1/users/1",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-04-02T15:33:54.191Z",
+            "modified": "2023-04-02T18:28:17.926Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6b9fa195-6060-4b5d-af1a-ebe56443fd8c",
+            "colId": "14c672c2-9547-47f4-aefa-dd20f98b5b2a",
+            "containerId": "7cff53b6-6ae8-4878-9455-15a33102b152",
+            "name": "http://localhost:3000/api/departments/2/users/1",
+            "url": "http://localhost:3000/api/departments/1/users/2",
+            "method": "PATCH",
+            "sortNum": 90000,
+            "created": "2023-04-02T15:35:52.621Z",
+            "modified": "2023-04-02T19:19:07.271Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"username\": \"asdjfhakjsdfsdfhdf\",\n \"departmentId\": 3\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5e66655c-94f0-4108-9d81-f08496e83660",
+            "colId": "14c672c2-9547-47f4-aefa-dd20f98b5b2a",
+            "containerId": "7cff53b6-6ae8-4878-9455-15a33102b152",
+            "name": "http://localhost:3000/api/departments/1/users/1",
+            "url": "http://localhost:3000/api/departments/1/users/1",
+            "method": "DELETE",
+            "sortNum": 100000,
+            "created": "2023-04-02T18:09:26.049Z",
+            "modified": "2023-04-02T19:20:28.906Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

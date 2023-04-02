@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package department;
+
+service DepartmentService {
+  rpc CreateDepartment (CreateDepartmentRequest) returns (CreateDepartmentResponse) {}
+  rpc GetDepartmentById (GetDepartmentByIdRequest) returns (GetDepartmentByIdResponse) {}
+  rpc UpdateDepartmentById (UpdateDepartmentByIdRequest) returns (UpdateDepartmentByIdResponse) {}
+  rpc DeleteDepartmentById (DeleteDepartmentByIdRequest) returns (DeleteDepartmentByIdResponse) {}
+  rpc GetAllDepartments (Empty) returns (GetAllDepartmentsResponse) {}
+}
+
+message Empty {}
+
+message DepartmentAssignData {
+  int32 id = 1;
+  int32 userId = 2;
+}
+
+message DepartmentData {
+  int32 id = 1;
+  string name = 2;
+  repeated DepartmentAssignData departmentAssign = 3;
+}
+
+message CreateDepartmentRequest {
+  string name = 1;
+}
+
+message CreateDepartmentResponse {
+  repeated string error = 1;
+  DepartmentData data = 2;
+}
+
+message GetDepartmentByIdRequest {
+  int32 id = 1;
+}
+
+message GetDepartmentByIdResponse {
+  repeated string error = 1;
+  DepartmentData data = 2;
+}
+
+message UpdateDepartmentByIdRequest {
+  int32 id = 1;
+  optional string name = 2;
+}
+
+message UpdateDepartmentByIdResponse {
+  repeated string error = 1;
+  DepartmentData data = 2;
+}
+
+message DeleteDepartmentByIdRequest {
+  int32 id = 1;
+}
+
+message DeleteDepartmentByIdResponse {
+  repeated string error = 1;
+}
+
+message GetAllDepartmentsResponse {
+  repeated string error = 1;
+  repeated DepartmentData data = 2;
+}

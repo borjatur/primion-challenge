@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package user;
+
+service UserService {
+  rpc CreateUser (CreateUserRequest) returns (CreateUserResponse) {}
+  rpc GetUserById (GetUserByIdRequest) returns (GetUserByIdResponse) {}
+  rpc UpdateUserById (UpdateUserByIdRequest) returns (UpdateUserByIdResponse) {}
+  rpc DeleteUserById (DeleteUserByIdRequest) returns (DeleteUserByIdResponse) {}
+  rpc GetAllUsersByDepartment (GetAllUsersByDepartmentRequest) returns (GetAllUsersByDepartmentResponse) {}
+}
+
+message CreateUserRequest {
+  string username = 1;
+  int32 departmentId = 2;
+}
+
+message CreateUserResponse {
+  repeated string error = 1;
+  UserData data = 2;
+}
+
+message GetUserByIdRequest {
+  int32 id = 1;
+}
+
+message UserData {
+  int32 id = 1;
+  string username = 2;
+  int32 departmentId = 3;
+}
+
+message GetUserByIdResponse {
+  repeated string error = 1;
+  UserData data = 2;
+}
+
+message UpdateUserByIdRequest {
+  int32 id = 1;
+  optional string username = 2;
+  optional int32 departmentId = 3;
+}
+
+message UpdateUserByIdResponse {
+  repeated string error = 1;
+  UserData data = 2;
+}
+
+message DeleteUserByIdRequest {
+  int32 id = 1;
+}
+
+message DeleteUserByIdResponse {
+  repeated string error = 1;
+}
+
+message GetAllUsersByDepartmentRequest {
+  int32 departmentId = 1;
+}
+
+message GetAllUsersByDepartmentResponse {
+  repeated string error = 1;
+  repeated UserData data = 2;
+}
