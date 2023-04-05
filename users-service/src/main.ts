@@ -1,14 +1,14 @@
-import { INestMicroservice, ValidationPipe } from '@nestjs/common';
+import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { Transport, MicroserviceOptions } from '@nestjs/microservices';
 import { join } from 'path';
-import { AppModule } from './app.module';
-import { protobufPackage } from './user/user.pb';
+import { AppModule } from './framework/app.module';
+import { protobufPackage } from 'src/controllers/grpc/user.package';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   // GRPC connector
-  const microserviceGrpc = app.connectMicroservice<MicroserviceOptions>({
+  app.connectMicroservice<MicroserviceOptions>({
     transport: Transport.GRPC,
     options: {
       url: '0.0.0.0:50053',
