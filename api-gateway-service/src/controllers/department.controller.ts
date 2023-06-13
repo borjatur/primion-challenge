@@ -155,11 +155,6 @@ export class DepartmentController implements OnModuleInit {
           error: ['Department not found'],
         });
       }
-      if (err.message.includes('Departments with users associated can not be deleted')) {
-        return response.status(HttpStatus.CONFLICT).send({
-          error: err.message,
-        });
-      }
       this.logger.error(err);
       return response.status(HttpStatus.INTERNAL_SERVER_ERROR).send({
         error: ['Server error'],

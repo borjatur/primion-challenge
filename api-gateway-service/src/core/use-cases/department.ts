@@ -142,14 +142,6 @@ export class DepartmentUseCases {
   }
 
   async deleteDepartmentById(departmentId: number): Promise<void> {
-    const departmentResponse = await lastValueFrom(
-      this.departmentService.getDepartmentById({ id: departmentId }),
-    );
-
-    if (departmentResponse?.data?.departmentAssign?.length) {
-      throw new Error('Departments with users associated can not be deleted');
-    }
-
     const departmentDeleteResponse = await lastValueFrom(
       this.departmentService.deleteDepartmentById({ id: departmentId }),
     );
